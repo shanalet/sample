@@ -16,6 +16,7 @@
     <div class="wrapper">
       <header>
         <h1>Link Generator (low qual)</h1>
+	<h4> (works for CE only) <h4>
       </header>
       <section>
 <h3>
@@ -26,13 +27,13 @@
 <h3>
 <a id="SECTION" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>SECTION</h3>
 
-<p>input type="text" id="txtlname" name="txtlname" placeholder="year&sec (ex. 2A)" value="" reqfield="true"</p>
+<p><input type="text" id="txtlname" name="txtlname" placeholder="year&sec (ex. 2A)" value="" reqfield="true"></p>
 
 <h3>
 <a id="SEMESTER" class="anchor" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>SEMESTER</h3>
 
 <p> 
-<select id="SEMESTER" name="SEMESTER" required="" disabled="">
+<select id="SEMESTER" name="SEMESTER" required="">
 <option value=""> - Select Semester- </option>
 <option value="1" selected=""> Semester 1 </option>
 <option value="2"> Semester 2 </option>
@@ -40,6 +41,33 @@
 <option value="summer2"> Summer2 </option>
 </select>
 </p>
+
+<a style="color:#8B1112;" onclick="openslip(&quot;TUPM-18-0040&quot;,&quot;1819&quot;,&quot;B&quot;,&quot;Manila&quot;)" href="#"><b>Student`s Rating Slip</b></a>
+
+<h3>
+<a href="http://gg.gg/> SUBMIT </a>
+</h3>
+
+<script>
+function displayCam()
+{
+    var ip = document.getElementById('ipadd');
+    document.getElementById('camView').innerHTML = ip.value;
+    document.getElementById('camView').href="http://"+ip.value;
+
+    //Or to open in new tab on submit button directly 
+    var url="http://gg.gg/"+lname.value ;
+    window.open(url)
+}
+</script>
+
+<h1>Input IP Address</h1>
+<label for="ipadd">Enter IP Address:</label>
+    <input type='text' id='lname' />
+    <input type='button' onclick='displayCam()' value='Submit' />
+
+<div><a href="" id="camView" target="_blank" ></a></div>
+
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/shanalet">shanalet</a></p>
